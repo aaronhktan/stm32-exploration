@@ -53,3 +53,4 @@ f031k6.elf: $(OBJS)
 clean:
 	rm -f $(OBJS)
 	rm -f f031k6.elf
+	rm -f f031k6.bin
