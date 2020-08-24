@@ -1,5 +1,14 @@
+// Build artifacts
 *.elf
 *.o
 *.bin
 
+// Editing artifacts
+*.swp
+
+// macOS stuff
 .DS_Store
+
+// Other data
+data/*
+
