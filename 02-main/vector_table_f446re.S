@@ -37,6 +37,7 @@ vtable:
   // According to the manual, 16 and above are configurable
   .word WWDG_handler /* Window WatchDog */
   .word PVD_handler /* PVD through EXTI Line detect */
+  .word TAMP_STAMP_handler /* Tamper and Timestamp through EXTI line */
   .word RTC_handler /* RTC through EXTI line */
   .word FLASH_handler /* FLASH */
   .word RCC_handler /* RCC */
@@ -71,7 +72,6 @@ vtable:
   .word I2C2_ER_handler /* I2C2 Error */
   .word SPI1_handler /* SPI1 */
   .word SPI2_handler /* SPI2 */
-  .word TIM14_handler /* TIM14 */
   .word USART1_handler /* USART1 */
   .word USART2_handler /* USART2 */
   .word USART3_handler /* USART3 */
@@ -162,6 +162,8 @@ vtable:
   .thumb_set WWDG_handler,default_irq_handler
   .weak PVD_handler
   .thumb_set PVD_handler,default_irq_handler
+  .weak TAMP_STAMP_handler
+  .thumb_set TAMP_STAMP_handler,default_irq_handler
   .weak RTC_handler
   .thumb_set RTC_handler,default_irq_handler
   .weak FLASH_handler
@@ -230,8 +232,6 @@ vtable:
   .thumb_set SPI1_handler,default_irq_handler
   .weak SPI2_handler
   .thumb_set SPI2_handler,default_irq_handler
-  .weak TIM14_handler
-  .thumb_set TIM14_handler,default_irq_handler
   .weak USART1_handler
   .thumb_set USART1_handler,default_irq_handler
   .weak USART2_handler
