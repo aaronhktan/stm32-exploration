@@ -67,7 +67,7 @@ SECTIONS
     . = ALIGN(4);
   } >RAM
 
-  /* bss for variables initialized to 0*/
+  /* bss for variables initialized to 0 */
   .bss :
   {
     . = ALIGN(4);
