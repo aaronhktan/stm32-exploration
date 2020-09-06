@@ -11,7 +11,11 @@ void start_timer(TIM_TypeDef *TIMx,
   RCC->APB1RSTR |= RCC_APB1RSTR_TIM2RST;
   RCC->APB1RSTR &= ~(RCC_APB1RSTR_TIM2RST);
 
+  // Since the PSC is a 16-bit value, it cannot hold 48 million
+  // So turn it into 48 000 (i.e. tick up every 48000 cycles)
   TIMx->PSC = core_clock_hz / 1000;
+  // And generate an interrupt event every ms cycles
+  // (if ms is 1000, then interrupt is generated every second)
   TIMx->ARR = ms;
   // "Update Generation" event, tells timer to reset and use new values
   TIMx->EGR |= TIM_EGR_UG;
