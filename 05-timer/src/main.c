@@ -47,7 +47,7 @@ int main(void) {
   // since both are 32-bit clocks)
   RCC->APB1ENR |= RCC_APB1ENR_TIM2EN;
 
-  // Enable wait staes for Flash access time
+  // Enable wait states for Flash access time
   // If HCLK is 48MHz, assuming voltage 2V7-3V6, use one wait state
   // (Table 3.4.1 of reference manual)
   FLASH->ACR &= ~(0x0000010F);
