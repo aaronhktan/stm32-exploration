@@ -2,4 +2,6 @@
 03-gpio/include_f446re/* linguist-vendored=true
 04-interrupt/include_f031k6/* linguist-vendored=true
 04-interrupt/include_f446re/* linguist-vendored=true
+05-timer/include_f031k6/* linguist-vendored=true
+05-timer/include_f446re/* linguist-vendored=true
 
