@@ -4,4 +4,6 @@
 04-interrupt/include_f446re/* linguist-vendored=true
 05-timer/include_f031k6/* linguist-vendored=true
 05-timer/include_f446re/* linguist-vendored=true
+06-freertos/freertos/* linguist=vendored=true
+06-freertos/include_f446re/* linguist-vendored=true
 
