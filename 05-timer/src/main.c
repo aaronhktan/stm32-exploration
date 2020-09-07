@@ -72,7 +72,7 @@ int main(void) {
   // (This also sets the core clock frequency, HCLK, on F446)
   RCC->CFGR &= ~(RCC_CFGR_SW);
   RCC->CFGR |= RCC_CFGR_SW_PLL;
-  core_clock_hz = 48000000; 
+  core_clock_hz = 48000000;
 
   // LED is push-pull output on Pin B3 on F031K6
   // or Pin A5 on F446RE
