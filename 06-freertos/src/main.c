@@ -2,7 +2,11 @@
 
 #include "timer.h"
 
+#ifdef F031K6
+#include "stm32f031x6.h"
+#else
 #include "stm32f446xx.h"
+#endif
 #include "FreeRTOS.h"
 #include "task.h"
 
@@ -28,8 +32,13 @@ int main(void) {
   // Set up clocks
   setup_timer();
 
+#ifdef F031K6
+  // Enable GPIO B port for LED
+  RCC->AHBENR |= RCC_AHBENR_GPIOBEN;
+#else
   // Enable GPIO A port for LED
   RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN;
+#endif
 
   // LED is push-pull output on Pin B3 on F031K6
   // or Pin A5 on F446RE
