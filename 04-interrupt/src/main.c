@@ -61,7 +61,7 @@ int main(void) {
   EXTI->IMR |= (1 << BUTTON_PIN);
   // Disable Rising Trigger Selection Register for button pin
   EXTI->RTSR &= ~(1 << BUTTON_PIN);
-  // Enable Falling Trigger Selection Trigger for button pin
+  // Enable Falling Trigger Selection Register for button pin
   EXTI->FTSR |= (1 << BUTTON_PIN);
 
   // Enable the NVIC interrupt; priority 3 is lowest
