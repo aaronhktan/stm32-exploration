@@ -2,9 +2,14 @@
 *.elf
 *.o
 *.bin
+*target*
+
+// Rust
+*.cargo-ok
 
 // Editing artifacts
 *.swp
+*.vscode*
 
 // macOS stuff
 .DS_Store
