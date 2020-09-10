@@ -20,10 +20,11 @@ int main(void) {
   GPIOB->PUPDR &= ~(0x3 << BUTTON_PUPD_POS);
   GPIOB->PUPDR |= (0x1 << BUTTON_PUPD_POS);
 
-  // LED is push-pull output on Pin B3 on F031K6
+  // LED is output on Pin B3 on F031K6
   // or Pin A5 on F446RE
   LED_PORT->MODER &= ~(0x3 << LED_MODE_POS);
   LED_PORT->MODER |= (0x1 << LED_MODE_POS);
+  // LED is push-pull output
   LED_PORT->OTYPER &= ~(0x1 << LED_PIN);
 
   // Poll for input on button and then set output
