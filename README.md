@@ -1,4 +1,4 @@
-# STM32 Experiments
+# STM32 Exploration
 
 A set of code examples and comments to teach myself a bit more about microcontrollers.
 
