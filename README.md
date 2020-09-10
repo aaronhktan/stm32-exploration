@@ -20,6 +20,7 @@ This repository contains code samples and examples to understand aspects of embe
 - `04-interrupt` does the same thing as `03-gpio` but uses **interrupts** using the **NVIC** and **EXTI** peripherals.
 - `05-timer` explores the **clock peripherals**, specifically using the **16MHz HSI oscillator** to drive a **PLL** and core clock (HCLK).
 - `06-freertos` explores configuration of and using **FreeRTOS** to blink LEDs at intervals.
+- `07-rust` generates a **peripheral access crate** using `svd2rust`, and then blinks LEDs with Rust.
 
 ## Build and run
 Development was done on macOS, so all the makefiles work on macOS. I have not verified that they work on Linux.
@@ -31,6 +32,8 @@ To run,
 - Type `arm-none-eabi-gdb <output-name.elf>`.
 - In GDB, `target extended-remote :4242`.
 - `load`, and then `continue`.
+
+For the Rust mini-project, build with `cargo build` in the appropriate `rust-blink` directory, and run with `openocd` and `cargo run`.
 
 ## Future
 - I intend to continue learning more about embedded programming with this series! A few fundamentals that I haven't had the time to include the basic communication peripherals (UART, SPI, I2C).
