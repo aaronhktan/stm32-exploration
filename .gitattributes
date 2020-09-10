@@ -7,4 +7,7 @@
 06-freertos/freertos/* linguist-vendored=true
 06-freertos/include_f031k6/* linguist-vendored=true
 06-freertos/include_f446re/* linguist-vendored=true
+07-rust/stm32f0x1/stm32f0x1_pac/* linguist-vendored=true
+07-rust/stm32f446/stm32f446_pac/* linguist-vendored=true
+07-rust/stm32l0x1/stm32l0x1_pac/* linguist-vendored=true
 
